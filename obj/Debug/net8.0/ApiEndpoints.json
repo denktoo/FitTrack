@@ -218,7 +218,7 @@
         "IsRequired": true
       },
       {
-        "Name": "updatedWorkout",
+        "Name": "workout",
         "Type": "FitTrack.Models.Workout",
         "IsRequired": true
       }

@@ -7,6 +7,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace FitTrack.Controllers
 {
@@ -28,6 +29,7 @@ namespace FitTrack.Controllers
             return View();
         }
 
+        // POST: /Account/Register
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -46,17 +48,16 @@ namespace FitTrack.Controllers
             {
                 Username = model.Username,
                 Email = model.Email,
-                Password = model.Password
+                Password = model.Password // Hash this in production!
             };
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            // Set role using shadow property
+            // Shadow property to assign role
             _context.Entry(user).Property("Role").CurrentValue = "User";
             await _context.SaveChangesAsync();
 
-            // Redirect to login after registration
             return RedirectToAction("Login");
         }
 
@@ -67,6 +68,7 @@ namespace FitTrack.Controllers
             return View();
         }
 
+        // POST: /Account/Login
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
@@ -81,19 +83,23 @@ namespace FitTrack.Controllers
                 return View(model);
             }
 
-            // Create JWT token with claims
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
+            // Determine user role
             var role = user.Username == "admin" ? "Admin" : "User";
 
+            // Create claims for the user
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Role, role)
+            };
+
+            // Generate JWT token
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Username),
-                    new Claim(ClaimTypes.Role, role)
-                }),
+                Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
@@ -101,21 +107,26 @@ namespace FitTrack.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // Store token in cookie or local storage for subsequent requests
+            // Option 1: Use JWT token stored in cookies
             HttpContext.Response.Cookies.Append("AuthToken", tokenString, new CookieOptions { HttpOnly = true });
+
+            // Option 2: Claims-based sign-in (cookie authentication)
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var principal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
             // Redirect based on role
             return role == "Admin" ? RedirectToAction("Dashboard", "Admin") : RedirectToAction("Dashboard", "User");
         }
 
+        // POST: /Account/Logout
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            // Sign out the user
-            await HttpContext.SignOutAsync();
-
-            // Redirect to home or login page after logout
+            // Sign out the user and clear the cookie
+            HttpContext.Response.Cookies.Delete("AuthToken");
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }
     }

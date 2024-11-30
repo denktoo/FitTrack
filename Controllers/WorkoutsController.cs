@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using FitTrack.Data;
 using FitTrack.Models;
 using FitTrack.Repositories;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace FitTrack.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class WorkoutsController : ControllerBase
@@ -20,14 +22,17 @@ namespace FitTrack.Controllers
         [HttpGet]
         public async Task<IActionResult> GetWorkouts()
         {
-            var workouts = await _workoutRepository.GetAllWorkouts();
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var workouts = await _workoutRepository.GetAllWorkouts(userId);
             return Ok(workouts);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetWorkout(int id)
         {
-            var workout = _workoutRepository.GetWorkoutById(id);
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var workout = await _workoutRepository.GetWorkoutById(userId, id);
+
             if (workout == null)
                 return NotFound();
 
@@ -37,39 +42,40 @@ namespace FitTrack.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWorkout([FromBody] Workout workout)
         {
-            var workoutCreated = await _workoutRepository.CreateWorkout(workout);
-            if (workoutCreated == null)
-            {
-                return BadRequest($"Workout cannot be null");
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            return CreatedAtAction(nameof(GetWorkout), new { id = workoutCreated.Id }, workoutCreated);
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            workout.UserId = userId;
+
+            var createdWorkout = await _workoutRepository.CreateWorkout(workout);
+            return CreatedAtAction(nameof(GetWorkout), new { id = createdWorkout.Id }, createdWorkout);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateWorkout(int id, [FromBody] Workout updatedWorkout)
+        public async Task<IActionResult> UpdateWorkout(int id, [FromBody] Workout workout)
         {
-            if (id != updatedWorkout.Id)
-            {
+            if (id != workout.Id)
                 return BadRequest();
-            }
 
-            var existingWorkout = await _workoutRepository.UpdateWorkout(updatedWorkout);
-            if (existingWorkout == null)
-            {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var success = await _workoutRepository.UpdateWorkout(userId, workout);
+
+            if (!success)
                 return NotFound();
-            }
+
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWorkout(int id)
         {
-            var workout = _workoutRepository.DeleteWorkout(id);
-            if (workout == null)
-            {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var success = await _workoutRepository.DeleteWorkout(userId, id);
+
+            if (!success)
                 return NotFound();
-            }
+
             return NoContent();
         }
     }

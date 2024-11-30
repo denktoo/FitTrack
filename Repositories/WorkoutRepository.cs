@@ -3,6 +3,7 @@ using FitTrack.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace FitTrack.Repositories
 {
@@ -15,14 +16,14 @@ namespace FitTrack.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Workout>> GetAllWorkouts()
+        public async Task<IEnumerable<Workout>> GetAllWorkouts(int userId)
         {
-            return await _context.Workouts.ToListAsync();
+            return await _context.Workouts.Where(w => w.UserId == userId).ToListAsync();
         }
 
-        public async Task<Workout> GetWorkoutById(int id)
+        public async Task<Workout> GetWorkoutById(int userId, int id)
         {
-            return await _context.Workouts.FindAsync(id);
+            return await _context.Workouts.FirstOrDefaultAsync(w => w.Id == id && w.UserId == userId);
         }
 
         public async Task<Workout> CreateWorkout(Workout workout)
@@ -32,26 +33,24 @@ namespace FitTrack.Repositories
             return workout;
         }
 
-        public async Task<bool> UpdateWorkout(Workout workout)
+        public async Task<bool> UpdateWorkout(int userId, Workout workout)
         {
-            var existingWorkout = await _context.Workouts.FindAsync(workout.Id);
-            if (existingWorkout != null)
-            {
-                existingWorkout.WorkoutDate = workout.WorkoutDate;
-                existingWorkout.Duration = workout.Duration;
-                await _context.SaveChangesAsync();
-            }
+            var existingWorkout = await _context.Workouts.FirstOrDefaultAsync(w => w.Id == workout.Id && w.UserId == userId);
+            if (existingWorkout == null) return false;
+
+            existingWorkout.WorkoutDate = workout.WorkoutDate;
+            existingWorkout.Duration = workout.Duration;
+            await _context.SaveChangesAsync();
             return true;
         }
 
-        public async Task<bool> DeleteWorkout(int id)
+        public async Task<bool> DeleteWorkout(int userId, int id)
         {
-            var workout = await _context.Workouts.FindAsync(id);
-            if (workout != null)
-            {
-                _context.Workouts.Remove(workout);
-                await _context.SaveChangesAsync();
-            }
+            var workout = await _context.Workouts.FirstOrDefaultAsync(w => w.Id == id && w.UserId == userId);
+            if (workout == null) return false;
+
+            _context.Workouts.Remove(workout);
+            await _context.SaveChangesAsync();
             return true;
         }
     }

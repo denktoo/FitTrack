@@ -1,4 +1,134 @@
-﻿@{
+﻿@model FitTrack.ViewModels.UserDashboardViewModel
+@{
     ViewData["Title"] = "User Dashboard";
 }
-<h2>Welcome to User Dashboard</h2>
+
+<div class="container mt-4">
+    <h2>Welcome to Your Dashboard, @User.Identity.Name!</h2>
+    <p class="text-muted">Manage your fitness goals and workouts here.</p>
+
+    <!-- Section: Workouts -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h4>Your Workouts</h4>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Duration (min)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var workout in Model.Workouts)
+                    {
+                        <tr>
+                            <td>@workout.WorkoutDate.ToShortDateString()</td>
+                            <td>@workout.Duration</td>
+                            <td>
+                                <form method="post" asp-action="DeleteWorkout" asp-controller="User">
+                                    <input type="hidden" name="id" value="@workout.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section: Add New Workout -->
+        <div class="col-md-6">
+            <h4>Add a New Workout</h4>
+            <form method="post" asp-action="AddWorkout" asp-controller="User">
+                <div class="mb-3">
+                    <label for="workoutDate" class="form-label">Workout Date</label>
+                    <input type="date" class="form-control" name="WorkoutDate" id="workoutDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="workoutDuration" class="form-label">Duration (minutes)</label>
+                    <input type="number" class="form-control" name="Duration" id="workoutDuration" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Workout</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section: Goals -->
+    <div class="row mt-4">
+        <!-- Existing Goals Table -->
+        <div class="col-md-6">
+            <h4>Your Goals</h4>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Target Date</th>
+                        <th>Achieved</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var goal in Model.Goals)
+                    {
+                        <tr>
+                            <td>@goal.Description</td>
+                            <td>@goal.TargetDate.ToShortDateString()</td>
+                            <td>@(goal.IsAchieved ? "Yes" : "No")</td>
+                            <td>
+                                <!-- Achieved Button -->
+                                @if (!goal.IsAchieved)
+                                {
+                                    <form method="post" asp-action="MarkGoalAsAchieved" asp-controller="User" class="d-inline">
+                                        <input type="hidden" name="id" value="@goal.Id" />
+                                        <button type="submit" class="btn btn-success btn-sm">Achieved</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-success btn-sm" disabled>Achieved</button>
+                                }
+                            </td>
+                            <td>
+                                <form method="post" asp-action="DeleteGoal" asp-controller="User">
+                                    <input type="hidden" name="id" value="@goal.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Add New Goal Form -->
+        <div class="col-md-6">
+            <h4>Add a New Goal</h4>
+            <form method="post" asp-action="AddGoal" asp-controller="User">
+                <div class="mb-3">
+                    <label for="workOutId" class="form-label">Workout</label>
+                    <select class="form-control" id="workOutId" name="WorkOutId" onchange="updateTargetDate()">
+                        <option value="" selected disabled>Select a workout</option>
+                        @foreach (var workout in Model.Workouts)
+                        {
+                            <option value="@workout.Id" data-target-date="@workout.WorkoutDate.ToString("yyyy-MM-dd")">
+                                @workout.WorkoutDate.ToString("MM/dd/yyyy") - @workout.Duration min
+                            </option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="targetDate" class="form-label">Target Date</label>
+                    <input type="date" class="form-control" id="targetDate" name="TargetDate" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" name="Description" id="description" maxlength="200" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Goal</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/script.js"></script>

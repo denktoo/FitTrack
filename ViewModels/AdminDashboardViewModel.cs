@@ -6,6 +6,7 @@
         public int TotalWorkouts { get; set; }
         public int GoalsAchieved { get; set; }
         public int PendingGoals { get; set; }
+        public UserOverview User { get; set; }
         public List<UserOverview> Users { get; set; }
         public List<WorkoutOverview> RecentWorkouts { get; set; }
         public List<GoalOverview> RecentGoals { get; set; }

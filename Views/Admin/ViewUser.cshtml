@@ -1,0 +1,93 @@
+﻿@model FitTrack.ViewModels.AdminDashboardViewModel
+
+@{
+    ViewData["Title"] = "View User Details";
+}
+
+<div class="container mt-4">
+    <h2>User Details</h2>
+
+    <!-- User Information -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4>@Model.User.Name</h4>
+            <p><strong>Email:</strong> @Model.User.Email</p>
+            <p><strong>Role:</strong> @Model.User.Role</p>
+            <p><strong>Total Workouts:</strong> @Model.User.WorkoutsCount</p>
+            <p><strong>Goals Achieved:</strong> @Model.User.GoalsAchievedCount</p>
+        </div>
+    </div>
+
+    <!-- Workouts Section -->
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">
+            <h5>Workouts</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Duration (mins)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.RecentWorkouts.Any())
+                    {
+                        foreach (var workout in Model.RecentWorkouts)
+                        {
+                            <tr>
+                                <td>@workout.Date.ToShortDateString()</td>
+                                <td>@workout.Duration</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="2" class="text-center">No workouts found.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Goals Section -->
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h5>Goals</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Target Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.RecentGoals.Any())
+                    {
+                        foreach (var goal in Model.RecentGoals)
+                        {
+                            <tr>
+                                <td>@goal.Description</td>
+                                <td>@goal.TargetDate.ToShortDateString()</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="2" class="text-center">No goals found.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mb-3">
+        <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-primary" style="margin-top: 10px;">Back to Dashboard</a>
+    </div>
+</div>

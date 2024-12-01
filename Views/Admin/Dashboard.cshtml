@@ -2,4 +2,146 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 
-<h2>Welcome to the Admin Dashboard</h2>
+<div class="container mt-4">
+    <h2>Admin Dashboard</h2>
+
+    <!-- Dashboard Statistics Section -->
+    <div class="row text-center mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5>Total Users</h5>
+                    <h3>@Model.TotalUsers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5>Workouts Logged</h5>
+                    <h3>@Model.TotalWorkouts</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5>Goals Achieved</h5>
+                    <h3>@Model.GoalsAchieved</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger">
+                <div class="card-body">
+                    <h5>Pending Goals</h5>
+                    <h3>@Model.PendingGoals</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Management Section -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h5>Manage Users</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Workouts</th>
+                                <th>Goals Achieved</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model.Users)
+                            {
+                                @if (user.Role != "Admin")
+                                {
+                                    <tr>
+                                        <td>@user.Id</td>
+                                        <td>@user.Name</td>
+                                        <td>@user.Email</td>
+                                        <td>@user.WorkoutsCount</td>
+                                        <td>@user.GoalsAchievedCount</td>
+                                        <td>
+                                            <a href="@Url.Action("ViewUser", "Admin", new { id = user.Id })" class="btn btn-primary btn-sm">View</a>
+                                            <a href="@Url.Action("DeleteUser", "Admin", new { id = user.Id })" class="btn btn-danger btn-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workouts and Goals Overview -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5>Recent Workouts</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Date</th>
+                                <th>Duration (mins)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var workout in Model.RecentWorkouts)
+                            {
+                                <tr>
+                                    <td>@workout.UserName</td>
+                                    <td>@workout.Date.ToShortDateString()</td>
+                                    <td>@workout.Duration</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5>Recent Goals</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Description</th>
+                                <th>Target Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var goal in Model.RecentGoals)
+                            {
+                                <tr>
+                                    <td>@goal.UserName</td>
+                                    <td>@goal.Description</td>
+                                    <td>@goal.TargetDate.ToShortDateString()</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

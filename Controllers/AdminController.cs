@@ -1,22 +1,67 @@
 ﻿using FitTrack.Data;
-using Microsoft.AspNetCore.Authorization;
+using FitTrack.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
-namespace FitTrack.Controllers
+public class AdminController : Controller
 {
-    //[Authorize(Roles = "Admin")]
-    public class AdminController : Controller
+    private readonly FitTrackContext _context;
+
+    public AdminController(FitTrackContext context)
     {
-        private readonly FitTrackContext _context;
+        _context = context;
+    }
 
-        public AdminController(FitTrackContext context)
+    public IActionResult Dashboard()
+    {
+        var viewModel = new AdminDashboardViewModel
         {
-            _context = context;
-        }
+            TotalUsers = _context.Users.Count(),
+            TotalWorkouts = _context.Workouts.Count(),
+            GoalsAchieved = _context.Goals.Count(g => g.IsAchieved),
+            PendingGoals = _context.Goals.Count(g => !g.IsAchieved),
+            Users = _context.Users.Select(u => new UserOverview
+            {
+                Id = u.Id,
+                Name = u.Username,
+                Role = EF.Property<string>(u, "Role"), // Access the shadow property
+                Email = u.Email,
+                WorkoutsCount = _context.Workouts.Count(w => w.UserId == u.Id),
+                GoalsAchievedCount = _context.Goals.Count(g => g.UserId == u.Id && g.IsAchieved)
+            }).ToList(),
+            RecentWorkouts = _context.Workouts
+                .OrderByDescending(w => w.WorkoutDate)
+                .Take(5)
+                .Select(w => new WorkoutOverview
+                {
+                    UserName = _context.Users.FirstOrDefault(u => u.Id == w.UserId).Username,
+                    Date = w.WorkoutDate,
+                    Duration = w.Duration
+                }).ToList(),
+            RecentGoals = _context.Goals
+                .OrderByDescending(g => g.TargetDate)
+                .Take(5)
+                .Select(g => new GoalOverview
+                {
+                    UserName = _context.Users.FirstOrDefault(u => u.Id == g.UserId).Username,
+                    Description = g.Description,
+                    TargetDate = g.TargetDate
+                }).ToList()
+        };
 
-        public IActionResult Dashboard()
-        {
-            return View();
-        }
+        return View(viewModel);
+    }
+
+    public IActionResult ViewUser(int id)
+    {
+        // Logic to view user details
+        return View();
+    }
+
+    public IActionResult DeleteUser(int id)
+    {
+        // Logic to delete a user
+        return RedirectToAction("Dashboard");
     }
 }

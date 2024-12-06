@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Denis\\source\\repos\\FitTrack\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Denis\\source\\repos\\FitTrack\\wwwroot\\images\\flat-lay-arrangement-with-running-shoes-towel.jpg",
+      "PackagePath": "staticwebassets\\images\\flat-lay-arrangement-with-running-shoes-towel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Denis\\source\\repos\\FitTrack\\wwwroot\\images\\watch-near-sports-equipment-grapefruit.jpg",
+      "PackagePath": "staticwebassets\\images\\watch-near-sports-equipment-grapefruit.jpg"
+    },
+    {
       "Id": "C:\\Users\\Denis\\source\\repos\\FitTrack\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },

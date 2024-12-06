@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1699"
+          "Value": "1698"
         },
         {
           "Name": "Content-Type",
@@ -25,22 +25,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yJmsVY5kaItcp7xopuAzG5gdbo3QI+Ojy0S7R8C1JyY=\""
+          "Value": "\"t1gR46a+3BNvhU8y//8kqLDKEAUZ24MaY4cqpGx4SoQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 01 Dec 2024 10:04:15 GMT"
+          "Value": "Fri, 06 Dec 2024 21:41:33 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-yJmsVY5kaItcp7xopuAzG5gdbo3QI+Ojy0S7R8C1JyY="
+          "Value": "sha256-t1gR46a+3BNvhU8y//8kqLDKEAUZ24MaY4cqpGx4SoQ="
         }
       ]
     },
     {
-      "Route": "css/site.kda5ihu3kd.css",
+      "Route": "css/site.fy2zvk9emp.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54,7 +54,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1699"
+          "Value": "1698"
         },
         {
           "Name": "Content-Type",
@@ -62,25 +62,271 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yJmsVY5kaItcp7xopuAzG5gdbo3QI+Ojy0S7R8C1JyY=\""
+          "Value": "\"t1gR46a+3BNvhU8y//8kqLDKEAUZ24MaY4cqpGx4SoQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 01 Dec 2024 10:04:15 GMT"
+          "Value": "Fri, 06 Dec 2024 21:41:33 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kda5ihu3kd"
+          "Value": "fy2zvk9emp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yJmsVY5kaItcp7xopuAzG5gdbo3QI+Ojy0S7R8C1JyY="
+          "Value": "sha256-t1gR46a+3BNvhU8y//8kqLDKEAUZ24MaY4cqpGx4SoQ="
         },
         {
           "Name": "label",
           "Value": "css/site.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "css/style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cQkVuLGl0CeX4WLXGddB+obsVnGgxU6tLGcj7zukrqg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 21:22:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cQkVuLGl0CeX4WLXGddB+obsVnGgxU6tLGcj7zukrqg="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.znv1s55ax7.css",
+      "AssetFile": "css/style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cQkVuLGl0CeX4WLXGddB+obsVnGgxU6tLGcj7zukrqg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 21:22:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "znv1s55ax7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cQkVuLGl0CeX4WLXGddB+obsVnGgxU6tLGcj7zukrqg="
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        }
+      ]
+    },
+    {
+      "Route": "images/flat-lay-arrangement-with-running-shoes-towel.39xrlq7mfy.jpg",
+      "AssetFile": "images/flat-lay-arrangement-with-running-shoes-towel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15682899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F65MZqhpmusE4Ss9xauiHa4GDHYttJxfhzWtqdq6nGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 01 Dec 2024 20:39:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "39xrlq7mfy"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F65MZqhpmusE4Ss9xauiHa4GDHYttJxfhzWtqdq6nGU="
+        },
+        {
+          "Name": "label",
+          "Value": "images/flat-lay-arrangement-with-running-shoes-towel.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/flat-lay-arrangement-with-running-shoes-towel.jpg",
+      "AssetFile": "images/flat-lay-arrangement-with-running-shoes-towel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15682899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F65MZqhpmusE4Ss9xauiHa4GDHYttJxfhzWtqdq6nGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 01 Dec 2024 20:39:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F65MZqhpmusE4Ss9xauiHa4GDHYttJxfhzWtqdq6nGU="
+        }
+      ]
+    },
+    {
+      "Route": "images/watch-near-sports-equipment-grapefruit.jpg",
+      "AssetFile": "images/watch-near-sports-equipment-grapefruit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17625559"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PXukzPjvEOrzuxA6MLpI6Xr1jWFL7fItllBp/Q6uRgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 01 Dec 2024 20:40:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PXukzPjvEOrzuxA6MLpI6Xr1jWFL7fItllBp/Q6uRgk="
+        }
+      ]
+    },
+    {
+      "Route": "images/watch-near-sports-equipment-grapefruit.n3ojwpipky.jpg",
+      "AssetFile": "images/watch-near-sports-equipment-grapefruit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17625559"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PXukzPjvEOrzuxA6MLpI6Xr1jWFL7fItllBp/Q6uRgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 01 Dec 2024 20:40:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n3ojwpipky"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PXukzPjvEOrzuxA6MLpI6Xr1jWFL7fItllBp/Q6uRgk="
+        },
+        {
+          "Name": "label",
+          "Value": "images/watch-near-sports-equipment-grapefruit.jpg"
         }
       ]
     },

@@ -44,7 +44,7 @@ namespace FitTrack.Data
             // Seed Data and Explicitly declare Role shadow property and set Role for the admin user
             modelBuilder.Entity<User>().Property<string>("Role");
             modelBuilder.Entity<User>().HasData(
-                new { Id = 1, Username = "admin", Email = "admin@gmail.com", Password = "admin123", Role = "Admin" }
+                new { Id = 1, Username = "admin", Email = "admin@gmail.com", Password = "admin!", Role = "Admin" }
             );
         }
     }

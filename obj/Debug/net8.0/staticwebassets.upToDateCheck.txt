@@ -1,4 +1,7 @@
 wwwroot\css\site.css
+wwwroot\css\style.css
+wwwroot\images\flat-lay-arrangement-with-running-shoes-towel.jpg
+wwwroot\images\watch-near-sports-equipment-grapefruit.jpg
 wwwroot\js\script.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

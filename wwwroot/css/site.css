@@ -15,7 +15,7 @@
 }
 
 body {
-    margin-bottom: 60px;
+    margin-bottom: 15px;
     background-color: #D3D3D3;
     color: #000000;
 }
@@ -26,8 +26,8 @@ html, body {
 }
 
 .container {
-    min-height: calc(100vh - 60px);
-    padding-bottom: 60px;
+    min-height: calc(100vh - 15px);
+    padding-bottom: 0px;
 }
 
 .navbar {

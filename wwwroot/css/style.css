@@ -8,6 +8,7 @@
     flex-direction: column;
     margin-bottom: 0px;
     flex: 1;
+    background-color: #000000;
 }
 
 .overlay-container {

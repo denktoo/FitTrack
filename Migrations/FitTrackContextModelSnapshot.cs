@@ -90,7 +90,7 @@ namespace FitTrack.Migrations
                         {
                             Id = 1,
                             Email = "admin@gmail.com",
-                            Password = "admin123",
+                            Password = "admin!",
                             Role = "Admin",
                             Username = "admin"
                         });

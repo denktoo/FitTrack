@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitTrack.Migrations
 {
     [DbContext(typeof(FitTrackContext))]
-    [Migration("20241120230004_InitialCreate")]
+    [Migration("20241217033108_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -93,7 +93,7 @@ namespace FitTrack.Migrations
                         {
                             Id = 1,
                             Email = "admin@gmail.com",
-                            Password = "admin123",
+                            Password = "admin!",
                             Role = "Admin",
                             Username = "admin"
                         });

@@ -92,7 +92,7 @@ namespace FitTrack.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "Password", "Role", "Username" },
-                values: new object[] { 1, "admin@gmail.com", "admin123", "Admin", "admin" });
+                values: new object[] { 1, "admin@gmail.com", "admin!", "Admin", "admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Goals_UserId",

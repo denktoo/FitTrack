@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Denis\\source\\FitTrack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\admin\\viewuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\admin\\viewuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -25,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\admin\\viewuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\admin\\viewuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,14 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15670EAD-0934-4BFB-B78D-38A7D6BFF154}|FitTrack.csproj|c:\\users\\denis\\source\\fittrack\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -165,7 +165,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -237,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
@@ -287,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ViewUser.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Admin\\ViewUser.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ViewUser.cshtml",
@@ -295,8 +295,7 @@
               "RelativeToolTip": "Views\\Admin\\ViewUser.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAACkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T14:39:12.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T14:39:12.18Z"
             },
             {
               "$type": "Document",
@@ -360,13 +359,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\User\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Dashboard.cshtml",
               "ToolTip": "C:\\Users\\Denis\\source\\FitTrack\\Views\\User\\Dashboard.cshtml",
               "RelativeToolTip": "Views\\User\\Dashboard.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAABcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-23T14:03:50.08Z",
               "EditorCaption": ""
@@ -409,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -421,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
@@ -433,13 +432,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Admin\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
               "ToolTip": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Admin\\Dashboard.cshtml",
               "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T00:01:42.337Z",
               "EditorCaption": ""
@@ -518,15 +517,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\Denis\\source\\FitTrack\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-19T13:55:59.695Z"
+              "WhenOpened": "2024-11-19T13:55:59.695Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -542,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
@@ -554,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -578,19 +578,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T12:21:45.643Z"
+              "WhenOpened": "2024-11-19T12:21:45.643Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "GoalsController.cs",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Controllers\\GoalsController.cs",
               "RelativeDocumentMoniker": "Controllers\\GoalsController.cs",
@@ -602,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -614,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -626,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "FitTrackContext.cs",
               "DocumentMoniker": "C:\\Users\\Denis\\source\\FitTrack\\Data\\FitTrackContext.cs",
               "RelativeDocumentMoniker": "Data\\FitTrackContext.cs",
@@ -656,7 +657,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Denis\\source\\FitTrack\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T10:56:36.623Z",
               "EditorCaption": ""

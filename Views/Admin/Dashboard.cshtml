@@ -49,37 +49,39 @@
                     <h5>Manage Users</h5>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>User ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Workouts</th>
-                                <th>Goals Achieved</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var user in Model.Users)
-                            {
-                                @if (user.Role != "Admin")
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Workouts</th>
+                                    <th>Goals Achieved</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var user in Model.Users)
                                 {
-                                    <tr>
-                                        <td>@user.Id</td>
-                                        <td>@user.Name</td>
-                                        <td>@user.Email</td>
-                                        <td>@user.WorkoutsCount</td>
-                                        <td>@user.GoalsAchievedCount</td>
-                                        <td>
-                                            <a href="@Url.Action("ViewUser", "Admin", new { id = user.Id })" class="btn btn-primary btn-sm">View</a>
-                                            <a href="@Url.Action("DeleteUser", "Admin", new { id = user.Id })" class="btn btn-danger btn-sm">Delete</a>
-                                        </td>
-                                    </tr>
+                                    @if (user.Role != "Admin")
+                                    {
+                                        <tr>
+                                            <td>@user.Id</td>
+                                            <td>@user.Name</td>
+                                            <td>@user.Email</td>
+                                            <td>@user.WorkoutsCount</td>
+                                            <td>@user.GoalsAchievedCount</td>
+                                            <td>
+                                                <a href="@Url.Action("ViewUser", "Admin", new { id = user.Id })" class="btn btn-primary btn-sm">View</a>
+                                                <a href="@Url.Action("DeleteUser", "Admin", new { id = user.Id })" class="btn btn-danger btn-sm">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
                                 }
-                            }
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

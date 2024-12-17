@@ -9,16 +9,16 @@ body {
 }
 
 .container {
-    min-height: calc(100vh - 15px);
+    min-height: calc(100vh - 30px);
     display: flex;
     flex-direction: column;
-    margin-bottom: 0px;
+    margin: 0;
     flex: 1;
 }
 
 html, body {
     height: 100%;
-    margin: 0px;
+    margin: 0;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -37,6 +37,15 @@ html, body {
         color: #D3D3D3;
     }
 
+/* Hamburger Button - Default Bootstrap Styling */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28128, 128, 128, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px; /* Adjust icon size */
+    height: 25px;
+}
+
 .footer {
     background-color: #808080;
     color: #FFFFFF;
@@ -44,8 +53,10 @@ html, body {
     bottom: 0;
     width: 100%;
     line-height: 30px;
+    height: 30px;
     padding-left: 10%;
     border-top: 2px solid black;
+    margin: 0;
 }
 
 /* Position the navbar items from the right edge of the screen */

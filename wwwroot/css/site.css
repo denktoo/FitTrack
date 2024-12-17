@@ -1,33 +1,28 @@
 ﻿html {
     position: relative;
-    min-height: 100%;
     font-size: 14px;
 }
 
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 body {
-    margin-bottom: 15px;
     background-color: #D3D3D3;
     color: #000000;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
 .container {
     min-height: calc(100vh - 15px);
-    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem darkgray, 0 0 0 0.25rem darkgray;
 }
 
 .navbar {
@@ -38,16 +33,9 @@ html, body {
     color: #ffffff;
 }
 
-.nav-link:hover {
-    color: #0077cc;
-}
-
-.btn-primary {
-    background-color: #1b6ec2;
-    border-color: #ffffff;
-    color: #ffffff;
-    text-align: right;
-}
+    .nav-link:hover {
+        color: #D3D3D3;
+    }
 
 .footer {
     background-color: #808080;
@@ -82,4 +70,10 @@ html, body {
 /* Larger font size for nav items */
 .larger-nav {
     font-size: 1.2rem; /* adjust font size */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
 }

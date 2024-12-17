@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Denis\\source\\repos\\FitTrack\\FitTrack.csproj": {}
+    "C:\\Users\\Denis\\source\\FitTrack\\FitTrack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Denis\\source\\repos\\FitTrack\\FitTrack.csproj": {
+    "C:\\Users\\Denis\\source\\FitTrack\\FitTrack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Denis\\source\\repos\\FitTrack\\FitTrack.csproj",
+        "projectUniqueName": "C:\\Users\\Denis\\source\\FitTrack\\FitTrack.csproj",
         "projectName": "FitTrack",
-        "projectPath": "C:\\Users\\Denis\\source\\repos\\FitTrack\\FitTrack.csproj",
+        "projectPath": "C:\\Users\\Denis\\source\\FitTrack\\FitTrack.csproj",
         "packagesPath": "C:\\Users\\Denis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Denis\\source\\repos\\FitTrack\\obj\\",
+        "outputPath": "C:\\Users\\Denis\\source\\FitTrack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

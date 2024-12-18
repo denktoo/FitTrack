@@ -48,7 +48,7 @@ namespace FitTrack.Controllers
             {
                 Username = model.Username,
                 Email = model.Email,
-                Password = model.Password // Hash this in production!
+                Password = model.Password
             };
 
             _context.Users.Add(user);
@@ -107,10 +107,9 @@ namespace FitTrack.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // Option 1: Use JWT token stored in cookies
-            HttpContext.Response.Cookies.Append("AuthToken", tokenString, new CookieOptions { HttpOnly = true });
+            //HttpContext.Response.Cookies.Append("AuthToken", tokenString, new CookieOptions { HttpOnly = true });
 
-            // Option 2: Claims-based sign-in (cookie authentication)
+            // Claims-based sign-in (cookie authentication)
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);

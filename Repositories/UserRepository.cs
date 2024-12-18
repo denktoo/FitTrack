@@ -15,22 +15,27 @@ namespace FitTrack.Repositories
 
         public async Task<IEnumerable<User>> GetAllUsers()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                .Include(w => w.Workouts)
+                .Include(g => g.Goals)
+                .ToListAsync();
         }
 
         public async Task<User> GetUserById(int id)
         {
-            return await _context.Users.FindAsync(id);
+            return await _context.Users
+                .Include(w => w.Workouts)
+                .Include(g => g.Goals)
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public async Task<User> GetUserByUsername(string username)
+        public async Task<User?> GetUserByUsername(string username)
         {
             return await _context.Users.SingleOrDefaultAsync(u => u.Username == username);
         }
 
         public async Task<User> CreateUser(User user)
         {
-            user.Password = user.Password;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;
@@ -43,6 +48,7 @@ namespace FitTrack.Repositories
             {
                 existingUser.Username = user.Username;
                 existingUser.Email = user.Email;
+                existingUser.Password = user.Password;
                 await _context.SaveChangesAsync();
             }
             return true;

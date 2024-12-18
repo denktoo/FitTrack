@@ -6,8 +6,8 @@ namespace FitTrack.Repositories
 {
     public interface IWorkoutRepository
     {
-        Task<IEnumerable<Workout>> GetAllWorkouts(int userId);
-        Task<Workout> GetWorkoutById(int userId, int id);
+        Task<IEnumerable<Workout>> GetAllWorkouts();
+        Task<Workout> GetWorkoutById(int id);
         Task<Workout> CreateWorkout(Workout workout);
         Task<bool> UpdateWorkout(int userId, Workout workout);
         Task<bool> DeleteWorkout(int userId, int id);

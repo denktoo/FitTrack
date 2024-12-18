@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace FitTrack.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class WorkoutsController : ControllerBase
@@ -22,21 +21,42 @@ namespace FitTrack.Controllers
         [HttpGet]
         public async Task<IActionResult> GetWorkouts()
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-            var workouts = await _workoutRepository.GetAllWorkouts(userId);
-            return Ok(workouts);
+            var workouts = await _workoutRepository.GetAllWorkouts();
+
+            var workoutsWithGoalsUrls = workouts.Select(workouts => new
+            {
+                workouts.Id,
+                workouts.UserId,
+                workouts.WorkoutDate,
+                workouts.Duration,
+
+                // List of goals URLs
+                goals = workouts.Goals.Select(g => $"https://localhost:7109/api/goals/{g.Id}").ToList()
+            });
+
+            return Ok(workoutsWithGoalsUrls);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetWorkout(int id)
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-            var workout = await _workoutRepository.GetWorkoutById(userId, id);
+            var workout = await _workoutRepository.GetWorkoutById(id);
 
             if (workout == null)
                 return NotFound();
 
-            return Ok(workout);
+            var workoutsWithGoalsUrls = new
+            {
+                workout.Id,
+                workout.UserId,
+                workout.WorkoutDate,
+                workout.Duration,
+
+                // List of goals URLs
+                goals = workout.Goals.Select(g => $"https://localhost:7109/api/goals/{g.Id}").ToList()
+            };
+
+            return Ok(workoutsWithGoalsUrls);
         }
 
         [HttpPost]

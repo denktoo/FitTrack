@@ -16,14 +16,18 @@ namespace FitTrack.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Workout>> GetAllWorkouts(int userId)
+        public async Task<IEnumerable<Workout>> GetAllWorkouts()
         {
-            return await _context.Workouts.Where(w => w.UserId == userId).ToListAsync();
+            return await _context.Workouts
+                .Include(g => g.Goals)
+                .ToListAsync();
         }
 
-        public async Task<Workout> GetWorkoutById(int userId, int id)
+        public async Task<Workout> GetWorkoutById(int id)
         {
-            return await _context.Workouts.FirstOrDefaultAsync(w => w.Id == id && w.UserId == userId);
+            return await _context.Workouts
+                .Include(g => g.Goals)
+                .FirstOrDefaultAsync(w => w.Id == id);
         }
 
         public async Task<Workout> CreateWorkout(Workout workout)

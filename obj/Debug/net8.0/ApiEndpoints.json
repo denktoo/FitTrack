@@ -163,6 +163,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FitTrack.Controllers.UsersController",
+    "Method": "GetUserByUsername",
+    "RelativePath": "api/Users/username/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FitTrack.Controllers.WorkoutsController",
     "Method": "GetWorkouts",
     "RelativePath": "api/Workouts",

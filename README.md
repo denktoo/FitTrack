@@ -2,5 +2,5 @@
 Empowering you to achieve your fitness goals through intuitive tracking and personalized goals.
 
 ## Features
-- **Workout Tracking**: Easily log your exercises and monitor your progress.
+- **Workout Tracking**: Easily log your Workouts and monitor your progress.
 - **Goal Setting**: Set personalized fitness goals and track your achievements.

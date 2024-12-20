@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace FitTrack.Controllers
 {
-    //[Authorize(Roles = "User")]
+    [Authorize(Roles = "User")]
     public class UserController : Controller
     {
         private readonly FitTrackContext _context;

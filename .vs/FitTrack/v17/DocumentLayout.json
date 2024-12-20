@@ -199,7 +199,7 @@
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\Denis\\source\\FitTrack\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2024-12-20T10:13:23.067Z",
               "EditorCaption": ""
@@ -646,8 +646,7 @@
               "RelativeToolTip": "Data\\FitTrackContext.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T11:06:30.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T11:06:30.409Z"
             },
             {
               "$type": "Document",

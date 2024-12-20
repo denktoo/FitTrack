@@ -70,7 +70,7 @@ html, body {
 
 /* Add margin between each nav item */
 .navbar-nav .nav-item {
-    margin-right: 20px; /* Adjust this for spacing between items */
+    margin-right: 20px; /* Adjust spacing between items */
 }
 
 /* Custom padding or spacing */

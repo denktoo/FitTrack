@@ -22,7 +22,7 @@ namespace FitTrack.Controllers
         {
             var viewModel = new AdminDashboardViewModel
             {
-                TotalUsers = _context.Users.Count(),
+                TotalUsers = _context.Users.Count(u => EF.Property<string>(u, "Role") != "Admin"), // Filtered count to only Non Admins Users
                 TotalWorkouts = _context.Workouts.Count(),
                 GoalsAchieved = _context.Goals.Count(g => g.IsAchieved),
                 PendingGoals = _context.Goals.Count(g => !g.IsAchieved),

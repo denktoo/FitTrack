@@ -37,7 +37,7 @@ html, body {
         color: #D3D3D3;
     }
 
-    .nav-link.btn.custom-button, btn-link {
+    .nav-link.btn.custom-button {
         padding: 0px 25px; /* Add spacing for a balanced look */
         border: none;
         height: 100%;

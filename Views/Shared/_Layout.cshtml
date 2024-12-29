@@ -29,41 +29,36 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav ms-auto">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <ul class="navbar-nav ms-auto d-flex larger-nav custom-padding-right">
-                                <!-- Display the username -->
-                                <li class="nav-item">
-                                    <span class="navbar-text">Hello, @User.FindFirst(ClaimTypes.Name)?.Value!</span>
-                                </li>
+                            <!-- Display the username -->
+                            <li class="nav-item">
+                                <span class="navbar-text">Hello, @User.FindFirst(ClaimTypes.Name)?.Value!</span>
+                            </li>
 
-                                <!-- Logout form -->
-                                <li class="nav-item">
-                                    <form asp-controller="Account" asp-action="Logout" method="post" style="display:inline;">
-                                        <button type="submit" class="btn btn-link nav-link">Logout</button>
-                                    </form>
-                                </li>
-                            </ul>
+                            <!-- Logout form -->
+                            <li class="nav-item">
+                                <form asp-controller="Account" asp-action="Logout" method="post" style="display:inline;">
+                                    <button type="submit" class="navbar-text btn custom-button nav-link">Logout</button>
+                                </form>
+                            </li>
                         }
 
                         else
                         {
-
-                            <ul class="navbar-nav ms-auto d-flex larger-nav custom-padding-right custom-nav-width">
-                                <li class="nav-item me-1">
-                                    <a class="nav-link btn custom-button" asp-controller="Home" asp-action="Index">Home</a>
-                                </li>
-                                <li class="nav-item me-1">
-                                    <a class="nav-link btn custom-button" asp-controller="Home" asp-action="About">About</a>
-                                </li>
-                                <li class="nav-item me-1">
-                                    <a class="nav-link btn custom-button" asp-controller="Account" asp-action="Register">Register</a>
-                                </li>
-                                <li class="nav-item me-1">
-                                    <a class="nav-link btn custom-button" asp-controller="Account" asp-action="Login">Login</a>
-                                </li>
-                            </ul>
+                            <li class="nav-item me-1">
+                                <a class="nav-link btn custom-button" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item me-1">
+                                <a class="nav-link btn custom-button" asp-controller="Home" asp-action="About">About</a>
+                            </li>
+                            <li class="nav-item me-1">
+                                <a class="nav-link btn custom-button" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                            <li class="nav-item me-1">
+                                <a class="nav-link btn custom-button" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
                         }
                     </ul>
                 </div>

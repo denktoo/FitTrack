@@ -37,6 +37,16 @@ html, body {
         color: #D3D3D3;
     }
 
+    .nav-link.btn.custom-button, btn-link {
+        padding: 0px 25px; /* Add spacing for a balanced look */
+        border: none;
+        height: 100%;
+        display: flex;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out;
+    }
+
 /* Hamburger Button - Default Bootstrap Styling */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28128, 128, 128, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -57,30 +67,6 @@ html, body {
     padding-left: 10%;
     border-top: 2px solid black;
     margin: 0;
-}
-
-/* Position the navbar items from the right edge of the screen */
-.custom-nav-width {
-    position: relative;
-    right: 0; /* Align items with the right edge */
-    width: 500px;
-    display: flex;
-    justify-content: space-between; /* Distribute items within the defined width */
-}
-
-/* Add margin between each nav item */
-.navbar-nav .nav-item {
-    margin-right: 20px; /* Adjust spacing between items */
-}
-
-/* Custom padding or spacing */
-.custom-padding-right {
-    padding-right: 100px; /* Adjust right padding */
-}
-
-/* Larger font size for nav items */
-.larger-nav {
-    font-size: 1.2rem; /* adjust font size */
 }
 
 @media (min-width: 768px) {

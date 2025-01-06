@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-7rasDDB2V60nhxM7y/8N08L0BLlBGaQGFnV2ltm80C0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1688"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227rasDDB2V60nhxM7y/8N08L0BLlBGaQGFnV2ltm80C0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 29 Dec 2024 15:39:46 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1688"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227rasDDB2V60nhxM7y/8N08L0BLlBGaQGFnV2ltm80C0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 04 Jan 2025 17:47:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FitTrack/css/site.meq9dn6ydi.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"meq9dn6ydi"},{"Name":"integrity","Value":"sha256-7rasDDB2V60nhxM7y/8N08L0BLlBGaQGFnV2ltm80C0="},{"Name":"label","Value":"_content/FitTrack/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1688"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227rasDDB2V60nhxM7y/8N08L0BLlBGaQGFnV2ltm80C0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 29 Dec 2024 15:39:46 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1688"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227rasDDB2V60nhxM7y/8N08L0BLlBGaQGFnV2ltm80C0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 04 Jan 2025 17:47:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FitTrack/js/script.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\script.js'))</AssetFile>
